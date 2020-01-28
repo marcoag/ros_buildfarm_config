@@ -2,28 +2,6 @@
 # ROS buildfarm index file
 ---
 distributions:
-  dashing:
-    ci_builds:
-      nightly-connext: dashing/ci-nightly-connext.yaml
-      nightly-cyclonedds: dashing/ci-nightly-cyclonedds.yaml
-      nightly-debug: dashing/ci-nightly-debug.yaml
-      nightly-extra-rmw-release: dashing/ci-nightly-extra-rmw-release.yaml
-      nightly-fastrtps: dashing/ci-nightly-fastrtps.yaml
-      nightly-fastrtps-dynamic: dashing/ci-nightly-fastrtps-dynamic.yaml
-      nightly-opensplice: dashing/ci-nightly-opensplice.yaml
-      nightly-performance: dashing/ci-nightly-performance.yaml
-      nightly-release: dashing/ci-nightly-release.yaml
-      overlay: dashing/ci-overlay.yaml
-    doc_builds: {}
-    notification_emails:
-      - steven+build.ros2.org@openrobotics.org
-      - ros2-buildfarm-dashing@googlegroups.com
-    release_builds:
-      default: dashing/release-build.yaml
-      ubv8: dashing/release-bionic-arm64-build.yaml
-      ubhf: dashing/release-bionic-armhf-build.yaml
-    source_builds:
-      default: dashing/source-build.yaml
   eloquent:
     ci_builds:
       nightly-connext: eloquent/ci-nightly-connext.yaml
@@ -40,76 +18,54 @@ distributions:
       overlay: eloquent/ci-overlay.yaml
     doc_builds: {}
     notification_emails:
-      - michael+build.ros2.org@openrobotics.org
-      - ros2-buildfarm-eloquent@googlegroups.com
+      - marco@openrobotics.com
     release_builds:
       default: eloquent/release-build.yaml
       ubhf: eloquent/release-bionic-armhf-build.yaml
       ubv8: eloquent/release-bionic-arm64-build.yaml
     source_builds:
       default: eloquent/source-build.yaml
-  foxy:
-    ci_builds:
-      nightly-connext: foxy/ci-nightly-connext.yaml
-      nightly-cyclonedds: foxy/ci-nightly-cyclonedds.yaml
-      nightly-debug: foxy/ci-nightly-debug.yaml
-      nightly-extra-rmw-release: foxy/ci-nightly-extra-rmw-release.yaml
-      nightly-fastrtps: foxy/ci-nightly-fastrtps.yaml
-      nightly-fastrtps-dynamic: foxy/ci-nightly-fastrtps-dynamic.yaml
-      nightly-navigation2: foxy/ci-nightly-navigation2.yaml
-      nightly-navigation2-prerequisites: foxy/ci-nightly-navigation2-prerequisites.yaml
-      nightly-opensplice: foxy/ci-nightly-opensplice.yaml
-      nightly-release: foxy/ci-nightly-release.yaml
-      overlay: foxy/ci-overlay.yaml
-    doc_builds: {}
-    notification_emails:
-      - jacob+build.ros2.org@openrobotics.org
-      - ros2-buildfarm-foxy@googlegroups.com
-    release_builds:
-      default: foxy/release-build.yaml
-      ubhf: foxy/release-bionic-armhf-build.yaml
-      ubv8: foxy/release-bionic-arm64-build.yaml
-    source_builds:
-      default: foxy/source-build.yaml
-jenkins_url: http://build.ros2.org
+jenkins_url: http://banmian.local:8080
 notification_emails:
-  - steven+build.ros2.org@openrobotics.org
+  - marco@openrobotics.org
 prerequisites:
   debian_repositories:
-  - http://repo.ros2.org/ubuntu/building
+  - http://banmian.local/ubuntu/building
   - http://repositories.ros.org/ubuntu/main
   debian_repository_keys:
   - |
-    -----BEGIN PGP PUBLIC KEY BLOCK-----
-    Version: GnuPGv1
 
-    mQINBFzvJpYBEADY8l1YvO7iYW5gUESyzsTGnMvVUmlV3XarBaJz9bGRmgPXh7jc
-    VFrQhE0L/HV7LOfoLI9H2GWYyHBqN5ERBlcA8XxG3ZvX7t9nAZPQT2Xxe3GT3tro
-    u5oCR+SyHN9xPnUwDuqUSvJ2eqMYb9B/Hph3OmtjG30jSNq9kOF5bBTk1hOTGPH4
-    K/AY0jzT6OpHfXU6ytlFsI47ZKsnTUhipGsKucQ1CXlyirndZ3V3k70YaooZ55rG
-    aIoAWlx2H0J7sAHmqS29N9jV9mo135d+d+TdLBXI0PXtiHzE9IPaX+ctdSUrPnp+
-    TwR99lxglpIG6hLuvOMAaxiqFBB/Jf3XJ8OBakfS6nHrWH2WqQxRbiITl0irkQoz
-    pwNEF2Bv0+Jvs1UFEdVGz5a8xexQHst/RmKrtHLct3iOCvBNqoAQRbvWvBhPjO/p
-    V5cYeUljZ5wpHyFkaEViClaVWqa6PIsyLqmyjsruPCWlURLsQoQxABcL8bwxX7UT
-    hM6CtH6tGlYZ85RIzRifIm2oudzV5l+8oRgFr9yVcwyOFT6JCioqkwldW52P1pk/
-    /SnuexC6LYqqDuHUs5NnokzzpfS6QaWfTY5P5tz4KHJfsjDIktly3mKVfY0fSPVV
-    okdGpcUzvz2hq1fqjxB6MlB/1vtk0bImfcsoxBmF7H+4E9ZN1sX/tSb0KQARAQAB
-    tCZPcGVuIFJvYm90aWNzIDxpbmZvQG9zcmZvdW5kYXRpb24ub3JnPokCVAQTAQoA
-    PhYhBMHPbjHmut6IaLFytPQu1vurF8ZUBQJc7yaWAhsDBQkDwmcABQsJCAcCBhUK
-    CQgLAgQWAgMBAh4BAheAAAoJEPQu1vurF8ZUkhIP/RbZY1ErvCEUy8iLJm9aSpLQ
-    nDZl5xILOxyZlzpg+Ml5bb0EkQDr92foCgcvLeANKARNCaGLyNIWkuyDovPV0xZJ
-    rEy0kgBrDNb3++NmdI/+GA92pkedMXXioQvqdsxUagXAIB/sNGByJEhs37F05AnF
-    vZbjUhceq3xTlvAMcrBWrgB4NwBivZY6IgLvl/CRQpVYwANShIQdbvHvZSxRonWh
-    NXr6v/Wcf8rsp7g2VqJ2N2AcWT84aa9BLQ3Oe/SgrNx4QEhA1y7rc3oaqPVu5ZXO
-    K+4O14JrpbEZ3Xs9YEjrcOuEDEpYktA8qqUDTdFyZrxb9S6BquUKrA6jZgT913kj
-    J4e7YAZobC4rH0w4u0PrqDgYOkXA9Mo7L601/7ZaDJob80UcK+Z12ZSw73IgBix6
-    DiJVfXuWkk5PM2zsFn6UOQXUNlZlDAOj5NC01V0fJ8P0v6GO9YOSSQx0j5UtkUbR
-    fp/4W7uCPFvwAatWEHJhlM3sQNiMNStJFegr56xQu1a/cbJH7GdbseMhG/f0BaKQ
-    qXCI3ffB5y5AOLc9Hw7PYiTFQsuY1ePRhE+J9mejgWRZxkjAH/FlAubqXkDgterC
-    h+sLkzGf+my2IbsMCuc+3aeNMJ5Ej/vlXefCH/MpPWAHCqpQhe2DET/jRSaM53US
-    AHNx8kw4MPUkxExgI7Sd
-    =4Ofr
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+    Version: GnuPG v1
+
+    mQENBF4vyXoBCADJEDQq0nAlJKhFBBGjpmdkSVW3sKOBaAjSKMSJlsQQkLzT0SPo
+    CihDhAx1oaMPLtB8xsBJw2odOdjMzVrklFv/70w9YwqCddlzKIrCtTOZ5fb8eVQG
+    IzQcPKReE7RW9f2DXjhxTBbGXCvuYaD40JwLEHLPdztrV2HDk6yM0GBmKCVqL1U8
+    dAVsr6boaomEmE4mpsmA15epVGDKr1nJDJEU8VLW7kG42DyCUs21H9dIOJf16eyv
+    DxlEJxuqTzvRrTzQ7Aj4VgCgqVa/Gh7oShB8VL4CGe832lK0Mxg0MunDtrJj/cey
+    FIpWCrkuhj97ZVIXKJ1Dewk/JMq4XCKTJ0d7ABEBAAG0K01hcmNvIEEuIEd1dGll
+    cnJleiA8bWFyY29Ab3BlbnJvYm90aWNzLmNvbT6JATgEEwECACIFAl4vyXoCGwMG
+    CwkIBwMCBhUIAgkKCwQWAgMBAh4BAheAAAoJEMeGkOS2fi+guVgH/0yok1DJ/3+V
+    6rd47AQgsUIXbvZm6yYZS4qam9UBu7KF5EM1p0Yr5+OTKhlpYmcFRbH1/CElBdgW
+    cTTxkPUX1IiGaKE1DelGHMyng/Xrsno6A03ZZ5pb9UnKzRpY3QtURGhmLxl2ZUkH
+    9X3uyaK753zXlOj9K8uFTmmPJDvEsOqWUoy1u1gUqbX/N6R+bKYc1JuUueLrUDKi
+    beqq/si8E8vY3hgGnDtswbUQxt5e8Izyax7wNID9cEm9Fuaj3+cNHFb6iuyFu+gl
+    972TLZ4xg9D9mH8OoQiY3hPH4AdZP4xJQbhjW0F4R/wQiiIkZkiZ769c61ptAevQ
+    YATY6VbL6Mu5AQ0EXi/JegEIAKSKdYXRr8vidqoNPQg1L/yBUZyb4Se3Jf0KKbgf
+    z8qilO/JoZU1VKCdatsgf1RKqdOQFIJ4jlsO5i+lZKoQb+EuCT25BlBZhi4/bCD0
+    anSrPIwKfIPprzYNorNo4ovVxcLT0JByifFL2jKFrxgj3ADLmPNlWNycy32G7rFz
+    048qWSbB4FAnEfzdo5LJox1W1i+OEg9EnJZpi2AGopkSdXUKMqJoFBzAHLFv9BTC
+    zxqkiBWOBsj73VXsXpiaENdZRpj7yAZAxJMGoQvHAGKKPzRS9xkBjZAqqRueoTlR
+    i5mydsTDooExtIcqzwny658MyVO0Ya2yiXTe1Ri9xrlltvMAEQEAAYkBHwQYAQIA
+    CQUCXi/JegIbDAAKCRDHhpDktn4voHbvCADHvxEXM4bwVTzZGKhtCaisMNfiwTa2
+    mhdMj0CJKZzQ3ff8x6wMxgcwBaR+oPnwWd7KdZrjEZTLLMyejtqe6zzx/0b/vcS2
+    XFpTJVAt3d2kLuKImdGd3ic9lDWVUkJVVPD6Q9RQVkjxxjy26Ex2W4yoIjHhJ1nU
+    9eIWmGkLsP4JECCjr6Yey7aKgimbSutCfS4/z85SsDiwfGmd3albTgwDDtTu+KJh
+    B70Z+YzAb/FG2W5bbIFfgTpu8bP66+/KAY3nTanWkbkzYOVSI//9Odllc2bHYgQc
+    hAqklJyPLZRqx3KGXL9uAngkVRiPfn/+9lW+8WO3AdcrKOmLZeRfPHxs
+    =rHL2
     -----END PGP PUBLIC KEY BLOCK-----
+
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: GnuPG v1.4.11 (GNU/Linux)
@@ -144,8 +100,8 @@ prerequisites:
 rosdistro_index_url: https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
 status_page_repositories:
   default:
-    - http://repo.ros2.org/ubuntu/building
-    - http://repo.ros2.org/ubuntu/testing
-    - http://repo.ros2.org/ubuntu/main
+    - http://banmian.local/ubuntu/building
+    - http://banmian.local/ubuntu/testing
+    - http://banmian.local/ubuntu/main
 type: buildfarm
 version: 1
